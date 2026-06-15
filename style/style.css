@@ -235,3 +235,18 @@ footer{
   .profile-img{width:140px;height:140px}
   .menu button{width:100%}
 }
+
+.resume-btn{
+  display:inline-block;
+  margin-top:15px;
+  padding:12px 25px;
+  background:#ff69b4;
+  color:white;
+  text-decoration:none;
+  border-radius:30px;
+  font-weight:bold;
+}
+
+.resume-btn:hover{
+  background:#d63384;
+}
