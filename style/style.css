@@ -291,3 +291,15 @@ footer{
 .resume-btn:hover{
   background:#d63384;
 }
+
+.card a{
+  color:#ffb6d9;
+  text-decoration:none;
+  font-weight:bold;
+  transition:0.3s;
+}
+
+.card a:hover{
+  color:white;
+  text-decoration:underline;
+}
