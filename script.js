@@ -7,7 +7,7 @@ function closePopup(id){
 }
 
 function openResume(){
-  window.open("style/resume.pdf", "_blank");
+  window.open("style/Resume Siti Zulaika.pdf", "_blank");
 }
 
 window.onclick = function(event){
