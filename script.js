@@ -1,9 +1,19 @@
-function showSection(sectionId) {
-  let sections = document.querySelectorAll(".content");
+function openPopup(id){
+  document.getElementById(id).classList.add("active");
+}
 
-  sections.forEach(function(section) {
-    section.classList.remove("active");
+function closePopup(id){
+  document.getElementById(id).classList.remove("active");
+}
+
+function openResume(){
+  window.open("style/resume.pdf", "_blank");
+}
+
+window.onclick = function(event){
+  document.querySelectorAll(".popup").forEach(function(popup){
+    if(event.target === popup){
+      popup.classList.remove("active");
+    }
   });
-
-  document.getElementById(sectionId).classList.add("active");
 }
