@@ -16,7 +16,7 @@ body{
   font-family:Arial, sans-serif;
   min-height:100vh;
   background:
-    linear-gradient(rgba(20,8,30,0.45), rgba(20,8,30,0.70)),
+    linear-gradient(rgba(20,8,30,0.45), rgba(20,8,30,0.72)),
     url("style/kotakinabalu.jpg.png");
   background-size:cover;
   background-position:center;
@@ -35,65 +35,67 @@ body{
 }
 
 .home-box{
-  max-width:850px;
+  width:90%;
+  max-width:900px;
   padding:45px;
-  border-radius:30px;
+  border-radius:35px;
   background:rgba(255,255,255,0.13);
-  border:1px solid rgba(255,182,217,0.7);
-  backdrop-filter:blur(12px);
-  box-shadow:0 20px 50px rgba(0,0,0,0.45);
+  border:1px solid rgba(255,182,217,0.8);
+  backdrop-filter:blur(14px);
+  box-shadow:0 20px 55px rgba(0,0,0,0.5);
 }
 
-.home-box h3{
-  color:#ffb6d9;
-  font-size:28px;
-  margin-bottom:10px;
-}
-
-.home-box h1{
-  font-size:58px;
-  margin-bottom:12px;
-}
-
-.home-box h2{
-  color:#ffd6e8;
+.profile-img{
+  width:150px;
+  height:150px;
+  object-fit:cover;
+  border-radius:50%;
+  border:4px solid #ffb6d9;
+  box-shadow:0 0 25px rgba(255,182,217,0.9);
   margin-bottom:18px;
 }
 
-.home-box p{
-  font-size:18px;
-  line-height:1.7;
+.home-box h1{
+  font-size:46px;
+  margin-bottom:10px;
+}
+
+.home-box h2{
+  color:#ffb6d9;
   margin-bottom:28px;
+  font-size:22px;
 }
 
 .menu{
   display:flex;
   justify-content:center;
   flex-wrap:wrap;
-  gap:12px;
+  gap:14px;
 }
 
 .menu button{
-  padding:13px 22px;
-  border-radius:25px;
-  border:1px solid #ffb6d9;
-  background:rgba(214,51,132,0.85);
+  padding:14px 24px;
+  border-radius:40px;
+  border:1px solid rgba(255,255,255,0.85);
+  background:linear-gradient(135deg, rgba(255,182,217,0.95), rgba(214,51,132,0.95));
   color:white;
   font-weight:bold;
   cursor:pointer;
   transition:0.3s;
+  box-shadow:0 8px 22px rgba(214,51,132,0.45);
 }
 
 .menu button:hover{
-  background:#ec407a;
-  transform:translateY(-4px);
+  background:linear-gradient(135deg, #ff9ed2, #ec407a);
+  transform:translateY(-5px) scale(1.05);
+  box-shadow:0 12px 30px rgba(255,158,210,0.65);
 }
 
 .popup{
   display:none;
   position:fixed;
   inset:0;
-  background:rgba(0,0,0,0.55);
+  background:rgba(0,0,0,0.58);
   align-items:center;
   justify-content:center;
   padding:25px;
@@ -111,8 +113,8 @@ body{
   overflow-y:auto;
   padding:35px;
   border-radius:28px;
-  background:rgba(45,15,45,0.75);
-  border:1px solid rgba(255,182,217,0.8);
+  background:rgba(45,15,45,0.78);
+  border:1px solid rgba(255,182,217,0.85);
   backdrop-filter:blur(18px);
   box-shadow:0 20px 60px rgba(0,0,0,0.6);
   animation:pop 0.25s ease;
@@ -214,8 +216,8 @@ footer{
 
 @media(max-width:700px){
   body{overflow:auto;}
-  .home-box h1{font-size:38px;}
   .home-box{padding:30px;}
+  .home-box h1{font-size:34px;}
   .menu button{width:100%;}
 }
 </style>
@@ -225,15 +227,13 @@ footer{
 
 <div class="home">
   <div class="home-box">
-    <h3>Welcome to</h3>
-    <h1>My E-Portfolio</h1>
-    <h2>Siti Zulaika Saleh</h2>
-    <p>
-      Final-year Computer Science student majoring in Computer Network Security at UniSZA.
-      Passionate about wireless network security, intrusion detection systems, network simulation, and cybersecurity.
-    </p>
+    <img src="profile.jpg" alt="Siti Zulaika" class="profile-img">
+
+    <h1>Siti Zulaika Saleh</h1>
+    <h2>Computer Network Security Student | UniSZA</h2>
 
     <div class="menu">
+      <button onclick="openPopup('homeInfo')">🏠 Home</button>
       <button onclick="openPopup('about')">👩 About</button>
       <button onclick="openPopup('career')">🔍 Career</button>
       <button onclick="openPopup('skills')">💻 Skills</button>
@@ -246,14 +246,31 @@ footer{
   </div>
 </div>
 
+<div id="homeInfo" class="popup">
+  <div class="popup-box">
+    <button class="close" onclick="closePopup('homeInfo')">×</button>
+    <h1>Home</h1>
+    <div class="card">
+      <p>
+        I am Siti Zulaika Saleh, a final-year Computer Science student at UniSZA,
+        majoring in Computer Network Security. I am passionate about wireless network
+        security, intrusion detection systems, network simulation, and cybersecurity.
+      </p>
+    </div>
+  </div>
+</div>
+
 <div id="about" class="popup">
   <div class="popup-box">
     <button class="close" onclick="closePopup('about')">×</button>
     <h1>About Me</h1>
-    <p>
-      I am Siti Zulaika Saleh, a final-year Bachelor of Computer Science student at
-      Universiti Sultan Zainal Abidin (UniSZA), majoring in Computer Network Security.
-    </p>
+
+    <div class="card">
+      <p>
+        I am Siti Zulaika Saleh, a final-year Bachelor of Computer Science student at
+        Universiti Sultan Zainal Abidin (UniSZA), majoring in Computer Network Security.
+      </p>
+    </div>
 
     <div class="card">
       <h2>Education</h2>
@@ -510,6 +527,7 @@ footer{
   <div class="popup-box">
     <button class="close" onclick="closePopup('contact')">×</button>
     <h1>Contact</h1>
+
     <div class="card">
       <p><b>Email:</b> sitizulaikasaleh@gmail.com</p>
       <p><b>LinkedIn:</b> linkedin.com/in/siti-zulaika-saleh-179934416</p>
