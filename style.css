@@ -1,0 +1,38 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 80%;
+  margin: 30px auto;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+h1 {
+  color: #333;
+  text-align: center;
+}
+
+h3 {
+  text-align: center;
+  color: #666;
+}
+
+h2 {
+  color: #5b4b8a;
+  border-bottom: 2px solid #5b4b8a;
+  padding-bottom: 5px;
+}
+
+section {
+  margin-top: 25px;
+}
+
+li {
+  margin-bottom: 8px;
+}
