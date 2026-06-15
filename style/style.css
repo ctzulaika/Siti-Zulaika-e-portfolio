@@ -152,6 +152,8 @@ body{
   background:rgba(45,15,45,0.78);
   border:1px solid rgba(255,182,217,0.85);
   backdrop-filter:blur(18px);
+  position: relative;
+z-index: 100;
 }
 
 .close{
