@@ -176,7 +176,7 @@ footer{
 
     <div class="menu">
       <button onclick="openPopup('homeInfo')">Home</button>
-      <button onclick="openPopup('about')">About</button>
+      <button onclick="openResume()">Resume</button>
       <button onclick="openPopup('career')">Career</button>
       <button onclick="openPopup('skills')">Skills</button>
       <button onclick="openPopup('projects')">Projects</button>
@@ -215,7 +215,38 @@ footer{
 <button class="close" onclick="closePopup('skills')">×</button>
 <h1>Personal Skills Assessment</h1>
 <h2>Technical Skills</h2>
-<div class="skills"><span>Network Security</span><span>Cybersecurity</span><span>Wireshark</span><span>Linux</span><span>NS-3</span><span>C++</span><span>Python</span></div>
+<table>
+  <tr>
+    <th>Skill</th>
+    <th>Current Level</th>
+    <th>Target Level</th>
+  </tr>
+  <tr>
+    <td>Network Security</td>
+    <td>80%</td>
+    <td>90%</td>
+  </tr>
+  <tr>
+    <td>Wireshark</td>
+    <td>75%</td>
+    <td>90%</td>
+  </tr>
+  <tr>
+    <td>Linux</td>
+    <td>70%</td>
+    <td>85%</td>
+  </tr>
+  <tr>
+    <td>Python</td>
+    <td>60%</td>
+    <td>80%</td>
+  </tr>
+  <tr>
+    <td>NS-3</td>
+    <td>75%</td>
+    <td>90%</td>
+  </tr>
+</table>
 <h2>Soft Skills</h2>
 <div class="skills"><span>Communication</span><span>Teamwork</span><span>Leadership</span><span>Problem Solving</span><span>Willing to Learn</span></div>
 <h2>Current Skills vs Industry Requirements</h2>
@@ -230,24 +261,68 @@ footer{
 <div class="card"><h2>Stress Relief Dashboard</h2><p>Built an interactive IoT system using ESP8266 microcontroller and Python.</p></div>
 </div></div>
 
-<div id="plan" class="popup"><div class="popup-box">
-<button class="close" onclick="closePopup('plan')">×</button>
-<h1>Career Development Plan</h1>
-<div class="card"><h2>Tools to Improve</h2><div class="skills"><span>Wireshark</span><span>Linux</span><span>Python</span><span>NS-3</span><span>Cisco Networking</span></div></div>
-<div class="card"><h2>Certification Plan</h2><ul><li>CCNA - To strengthen networking knowledge</li><li>CompTIA Security+ - To improve cybersecurity fundamentals</li><li>Basic SOC or cybersecurity workshop - To gain practical exposure</li></ul></div>
-<div class="card"><h2>2-Year Goal</h2><ul><li>Graduate from UniSZA</li><li>Improve Linux, networking, and Wireshark skills</li><li>Complete CCNA certification</li><li>Apply for internship or entry-level IT/security position</li></ul></div>
-<div class="card"><h2>5-Year Goal</h2><ul><li>Work as a Network Security Analyst</li><li>Gain hands-on cybersecurity experience</li><li>Obtain Security+ certification</li><li>Improve skills in IDS, monitoring tools, and network defense</li></ul></div>
-</div></div>
+<div id="plan" class="popup">
+  <div class="popup-box">
+    <button class="close" onclick="closePopup('plan')">×</button>
+    <h1>Career Development Plan</h1>
 
-<div id="evidence" class="popup"><div class="popup-box">
-<button class="close" onclick="closePopup('evidence')">×</button>
-<h1>Evidence of Learning</h1>
-<div class="card"><p>Evidence can include screenshots, certificates, links, or project results.</p><ul><li>NS-3 simulation screenshot</li><li>NetAnim topology screenshot</li><li>Wireshark packet analysis screenshot</li><li>FYP result/output screenshot</li><li>Certificates or workshop participation</li><li>GitHub project link</li></ul></div>
-</div></div>
+    <div class="gallery">
+      <div class="cert-card">
+        <img src="style/ccna.png">
+        <h3>CCNA</h3>
+        <p>To improve networking knowledge.</p>
+      </div>
+
+      <div class="cert-card">
+        <img src="style/comptia.png">
+        <h3>CompTIA Security+</h3>
+        <p>To strengthen cybersecurity fundamentals.</p>
+      </div>
+
+      <div class="cert-card">
+        <img src="style/wireshark-logo.png">
+        <h3>Wireshark</h3>
+        <p>To improve packet analysis skills.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="evidence" class="popup">
+  <div class="popup-box">
+    <button class="close" onclick="closePopup('evidence')">×</button>
+    <h1>Evidence of Learning</h1>
+
+    <p>This section shows my certificates, project evidence, and learning activities related to computer network security.</p>
+
+    <div class="gallery">
+      <div class="cert-card">
+        <img src="style/cert1.jpg">
+        <h3>Certificate 1</h3>
+      </div>
+
+      <div class="cert-card">
+        <img src="style/cert2.jpg">
+        <h3>Certificate 2</h3>
+      </div>
+
+      <div class="cert-card">
+        <img src="style/fyp.jpg">
+        <h3>Final Year Project</h3>
+      </div>
+
+      <div class="cert-card">
+        <img src="style/netanim.jpg">
+        <h3>NS-3 / NetAnim Simulation</h3>
+      </div>
+    </div>
+  </div>
+</div>
 
 <div id="reflection" class="popup"><div class="popup-box">
 <button class="close" onclick="closePopup('reflection')">×</button>
 <h1>Personal Reflection</h1>
+  <img src="style/sabahnet.png" class="company-logo">
 <div class="card"><h2>Dream Company: Sabah Net Sdn. Bhd.</h2><p>I want to work at Sabah Net because the company is related to networking and ICT services. This matches my interest in computer network security and allows me to grow in a real network security environment.</p></div>
 <div class="card"><h2>What value can I bring?</h2><p>I can bring basic knowledge in network security, Wireshark, NS-3 simulation, cybersecurity fundamentals, and willingness to learn new technologies.</p></div>
 <div class="card"><h2>Why should you hire me?</h2><p>I am responsible, willing to learn, and able to work in a team. My academic background and FYP experience have prepared me to understand basic network security issues.</p></div>
@@ -274,5 +349,11 @@ window.onclick=function(event){
 }
 </script>
 
+<script>
+function openResume(){
+  window.open("style/resume.pdf", "_blank");
+}
+</script>
+  
 </body>
 </html>
