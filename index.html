@@ -8,64 +8,100 @@
 </head>
 <body>
 
-<div class="container">
-  <h1>🌸 Siti Zulaika Saleh</h1>
-  <p class="subtitle">Computer Network Security Student | UniSZA</p>
+<div class="sidebar">
+  <h2>Siti Zulaika Saleh</h2>
+  <p>Computer Network Security Student</p>
+  <p class="uni">UniSZA</p>
 
-  <div class="menu">
-    <button onclick="showSection('home')">Home</button>
-    <button onclick="showSection('career')">Career</button>
-    <button onclick="showSection('skills')">Skills</button>
-    <button onclick="showSection('projects')">Projects</button>
-    <button onclick="showSection('plan')">Career Plan</button>
-    <button onclick="showSection('evidence')">Evidence</button>
-    <button onclick="showSection('reflection')">Reflection</button>
-    <button onclick="showSection('contact')">Contact</button>
-  </div>
+  <button onclick="showSection('home')">🏠 Home</button>
+  <button onclick="showSection('about')">👩 About Me</button>
+  <button onclick="showSection('career')">🔍 Career</button>
+  <button onclick="showSection('skills')">💻 Skills</button>
+  <button onclick="showSection('projects')">📂 Projects</button>
+  <button onclick="showSection('plan')">📈 Career Plan</button>
+  <button onclick="showSection('evidence')">🏆 Evidence</button>
+  <button onclick="showSection('reflection')">💼 Reflection</button>
+  <button onclick="showSection('contact')">📞 Contact</button>
+</div>
+
+<div class="main">
 
   <section id="home" class="content active">
-    <h2>About Me</h2>
+    <p class="welcome">Welcome to</p>
+    <h1>My E-Portfolio</h1>
     <p>
-      I am a final-year Bachelor of Computer Science student at Universiti Sultan Zainal Abidin (UniSZA),
-      majoring in Computer Network Security.
+      A final-year Computer Science student majoring in Computer Network Security,
+      passionate about wireless network security, IDS, network simulation, and cybersecurity.
     </p>
+    <div class="buttons">
+      <button onclick="showSection('projects')">View My Work</button>
+      <button onclick="showSection('contact')">Contact Me</button>
+    </div>
+  </section>
+
+  <section id="about" class="content">
+    <h1>About Me</h1>
+
     <p>
-      I am interested in wireless network security, intrusion detection systems, network simulation,
-      and cybersecurity.
+      I am Siti Zulaika Saleh, a final-year Bachelor of Computer Science student
+      at Universiti Sultan Zainal Abidin (UniSZA), majoring in Computer Network Security.
     </p>
+
+    <h2>Education</h2>
+    <ul>
+      <li>Bachelor of Computer Science (Computer Network Security) with Honours - UniSZA</li>
+      <li>STPM - Sports Science, Business Studies, and General Studies</li>
+    </ul>
+
+    <h2>Experience</h2>
+    <ul>
+      <li>Cashier at Restaurant - 2 Months</li>
+      <li>External Netball Trainer - 5 Months</li>
+      <li>Flood Relief Volunteer</li>
+    </ul>
   </section>
 
   <section id="career" class="content">
-    <h2>Career Exploration</h2>
-    <h3>Chosen Career: Network Security Analyst</h3>
+    <h1>Career Exploration</h1>
+
+    <h2>Chosen Career: Network Security Analyst</h2>
     <p>
-      A Network Security Analyst monitors network traffic, detects security threats,
-      analyzes suspicious activity, and helps protect an organization's network.
+      A Network Security Analyst is responsible for monitoring network traffic,
+      detecting security threats, analyzing suspicious activities, and protecting
+      an organization’s network from cyber attacks.
     </p>
 
-    <h3>Job Responsibilities</h3>
+    <h2>Job Responsibilities</h2>
     <ul>
       <li>Monitor network traffic and security alerts.</li>
-      <li>Detect cyber attacks and unauthorized access.</li>
-      <li>Analyze packets using Wireshark.</li>
-      <li>Prepare security reports.</li>
+      <li>Detect unauthorized access and cyber attacks.</li>
+      <li>Analyze packets using tools such as Wireshark.</li>
+      <li>Prepare security reports and incident findings.</li>
+      <li>Support network protection and security improvement.</li>
     </ul>
 
-    <h3>Required Skills</h3>
+    <h2>Required Skills</h2>
     <ul>
       <li>Networking fundamentals</li>
       <li>Cybersecurity knowledge</li>
-      <li>Wireshark and packet analysis</li>
-      <li>Linux basics</li>
-      <li>Problem-solving skills</li>
+      <li>Packet analysis using Wireshark</li>
+      <li>Linux basic command skills</li>
+      <li>Problem-solving and communication skills</li>
     </ul>
+
+    <h2>Relevance to Cybersecurity</h2>
+    <p>
+      This role is important because modern organizations depend on secure networks.
+      Network Security Analysts help prevent data breaches, detect attacks, and ensure
+      network availability for users.
+    </p>
   </section>
 
   <section id="skills" class="content">
-    <h2>Personal Skills Assessment</h2>
+    <h1>Personal Skills Assessment</h1>
 
-    <h3>Technical Skills</h3>
-    <div class="skills">
+    <h2>Technical Skills</h2>
+    <div class="skill-box">
       <span>Network Security</span>
       <span>Cybersecurity</span>
       <span>Wireshark</span>
@@ -75,15 +111,16 @@
       <span>Python</span>
     </div>
 
-    <h3>Soft Skills</h3>
-    <div class="skills">
+    <h2>Soft Skills</h2>
+    <div class="skill-box">
       <span>Communication</span>
       <span>Teamwork</span>
       <span>Leadership</span>
       <span>Problem Solving</span>
+      <span>Willing to Learn</span>
     </div>
 
-    <h3>Current Skills vs Industry Requirements</h3>
+    <h2>Current Skills vs Industry Requirements</h2>
     <table>
       <tr>
         <th>Skill</th>
@@ -110,93 +147,145 @@
         <td>70%</td>
         <td>90%</td>
       </tr>
+      <tr>
+        <td>Wireshark</td>
+        <td>75%</td>
+        <td>90%</td>
+      </tr>
     </table>
   </section>
 
   <section id="projects" class="content">
-    <h2>Projects</h2>
+    <h1>Projects</h1>
 
     <div class="card">
-      <h3>Final Year Project</h3>
-      <p><b>Enhancing Wireless Network Security through IP/MAC Filtering and IDS</b></p>
+      <h2>Final Year Project</h2>
+      <p><b>Enhancing Wireless Network Security through IP/MAC Filtering and Intrusion Detection System (IDS)</b></p>
       <ul>
         <li>Designed and simulated wireless network security using NS-3.</li>
-        <li>Implemented IP/MAC filtering and IDS.</li>
-        <li>Tested UDP Flood Attack detection.</li>
+        <li>Implemented IP/MAC address filtering.</li>
+        <li>Implemented rule-based IDS for attack detection.</li>
+        <li>Tested UDP Flood Attack scenario.</li>
         <li>Analyzed throughput, PDR, packet loss, and delay.</li>
       </ul>
     </div>
 
     <div class="card">
-      <h3>SULAM Project</h3>
-      <p>Digital Marketing and Community Engagement.</p>
+      <h2>SULAM Project</h2>
+      <p>
+        Digital Marketing and Community Engagement project involving promotional
+        content and online engagement.
+      </p>
     </div>
 
     <div class="card">
-      <h3>Stress Relief Dashboard</h3>
-      <p>Built an interactive IoT system using ESP8266 and Python.</p>
+      <h2>Stress Relief Dashboard</h2>
+      <p>
+        Built an interactive IoT system using ESP8266 microcontroller and Python.
+      </p>
     </div>
   </section>
 
   <section id="plan" class="content">
-    <h2>Career Development Plan</h2>
+    <h1>Career Development Plan</h1>
 
-    <h3>Short-Term Goals (2026 - 2028)</h3>
+    <h2>Tools to Improve</h2>
+    <div class="skill-box">
+      <span>Wireshark</span>
+      <span>Linux</span>
+      <span>Python</span>
+      <span>NS-3</span>
+      <span>Cisco Networking</span>
+    </div>
+
+    <h2>Certifications Plan</h2>
     <ul>
-      <li>Graduate from UniSZA.</li>
-      <li>Improve Linux and networking skills.</li>
-      <li>Complete CCNA certification.</li>
-      <li>Learn SOC tools and security monitoring.</li>
+      <li>CCNA - To strengthen networking knowledge.</li>
+      <li>CompTIA Security+ - To improve cybersecurity fundamentals.</li>
+      <li>Basic SOC or cybersecurity workshop - To gain practical exposure.</li>
     </ul>
 
-    <h3>Long-Term Goals (2028 - 2031)</h3>
+    <h2>2-Year Goal</h2>
+    <ul>
+      <li>Graduate from UniSZA.</li>
+      <li>Improve Linux, networking, and Wireshark skills.</li>
+      <li>Complete CCNA certification.</li>
+      <li>Apply for internship or entry-level IT/security position.</li>
+    </ul>
+
+    <h2>5-Year Goal</h2>
     <ul>
       <li>Work as a Network Security Analyst.</li>
       <li>Gain hands-on cybersecurity experience.</li>
       <li>Obtain Security+ certification.</li>
-      <li>Improve IDS and network defense skills.</li>
+      <li>Improve skills in IDS, monitoring tools, and network defense.</li>
     </ul>
   </section>
 
   <section id="evidence" class="content">
-    <h2>Evidence of Learning</h2>
-    <p>Evidence can include screenshots, certificates, project links, or lab results.</p>
+    <h1>Evidence of Learning</h1>
 
-    <ul>
-      <li>NS-3 simulation screenshot</li>
-      <li>NetAnim topology screenshot</li>
-      <li>Wireshark packet analysis screenshot</li>
-      <li>Certificates or workshop participation</li>
-      <li>GitHub project link</li>
-    </ul>
+    <p>
+      Evidence can include screenshots, certificates, links, or project results.
+    </p>
+
+    <div class="card">
+      <h2>Suggested Evidence to Upload</h2>
+      <ul>
+        <li>NS-3 simulation screenshot</li>
+        <li>NetAnim topology screenshot</li>
+        <li>Wireshark packet analysis screenshot</li>
+        <li>FYP result/output screenshot</li>
+        <li>Certificates or workshop participation</li>
+        <li>GitHub project link</li>
+      </ul>
+    </div>
+
+    <p class="note">
+      Note: Replace this section with your real screenshots or certificates later.
+    </p>
   </section>
 
   <section id="reflection" class="content">
-    <h2>Personal Reflection</h2>
+    <h1>Personal Reflection</h1>
 
-    <h3>Dream Company: Sabah Net Sdn. Bhd.</h3>
+    <h2>Dream Company: Sabah Net Sdn. Bhd.</h2>
+
+    <h3>Why do I want to work for this company?</h3>
     <p>
-      I want to work at Sabah Net because it is related to network and ICT services,
-      which match my interest in computer network security.
+      I want to work at Sabah Net because the company is related to networking and ICT services.
+      This matches my interest in computer network security and allows me to grow in a real
+      network security environment.
     </p>
 
     <h3>What value can I bring?</h3>
     <p>
       I can bring basic knowledge in network security, Wireshark, NS-3 simulation,
-      and cybersecurity analysis.
+      cybersecurity fundamentals, and willingness to learn new technologies.
     </p>
 
     <h3>Why should you hire me?</h3>
     <p>
-      I am willing to learn, responsible, and interested in improving my technical skills
-      in network security.
+      I am responsible, willing to learn, and able to work in a team. My academic background
+      and FYP experience have prepared me to understand basic network security issues and
+      security monitoring concepts.
     </p>
+
+    <h3>What skills make me suitable?</h3>
+    <ul>
+      <li>Basic networking knowledge</li>
+      <li>Network security analysis</li>
+      <li>Wireshark packet analysis</li>
+      <li>Linux basics</li>
+      <li>Problem-solving and teamwork</li>
+    </ul>
 
     <h3>Strengths</h3>
     <ul>
       <li>Willing to learn</li>
-      <li>Teamwork</li>
-      <li>Basic network security knowledge</li>
+      <li>Responsible</li>
+      <li>Good teamwork</li>
+      <li>Interested in cybersecurity</li>
     </ul>
 
     <h3>Weaknesses</h3>
@@ -204,15 +293,26 @@
       <li>Need to improve advanced programming skills</li>
       <li>Need more hands-on cybersecurity experience</li>
     </ul>
+
+    <h3>Why would a company choose to hire me?</h3>
+    <p>
+      A company may choose to hire me because I have a strong interest in network security,
+      basic technical knowledge, and the motivation to improve through practical experience.
+    </p>
   </section>
 
   <section id="contact" class="content">
-    <h2>Contact</h2>
+    <h1>Contact</h1>
     <p><b>Email:</b> sitizulaikasaleh@gmail.com</p>
     <p><b>LinkedIn:</b> linkedin.com/in/siti-zulaika-saleh-179934416</p>
     <p><b>GitHub:</b> github.com/sitizulaikasaleh</p>
   </section>
+
 </div>
+
+<footer>
+  © 2026 Siti Zulaika Saleh | Inspired by Kinabalu
+</footer>
 
 <script src="script.js"></script>
 </body>
