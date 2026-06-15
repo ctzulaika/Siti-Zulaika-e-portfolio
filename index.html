@@ -10,140 +10,177 @@
   margin:0;
   padding:0;
   box-sizing:border-box;
-  scroll-behavior:smooth;
 }
 
 body{
   font-family:Arial, sans-serif;
-  background:#fff5fa;
-  color:#333;
-}
-
-.hero{
   min-height:100vh;
   background:
-    linear-gradient(rgba(30,10,35,0.45),rgba(30,10,35,0.75)),
+    linear-gradient(rgba(20,8,30,0.45), rgba(20,8,30,0.70)),
     url("kinabalu.jpg");
   background-size:cover;
   background-position:center;
+  background-attachment:fixed;
   color:white;
+  overflow:hidden;
+}
+
+.home{
+  height:100vh;
   display:flex;
-  justify-content:center;
   align-items:center;
+  justify-content:center;
   text-align:center;
   padding:30px;
 }
 
-.hero-box{
-  background:rgba(255,255,255,0.13);
-  backdrop-filter:blur(10px);
-  border:1px solid rgba(255,182,217,0.6);
+.home-box{
+  max-width:850px;
+  padding:45px;
   border-radius:30px;
-  padding:50px;
-  max-width:800px;
-  box-shadow:0 15px 40px rgba(0,0,0,0.35);
+  background:rgba(255,255,255,0.13);
+  border:1px solid rgba(255,182,217,0.7);
+  backdrop-filter:blur(12px);
+  box-shadow:0 20px 50px rgba(0,0,0,0.45);
 }
 
-.hero h1{
-  font-size:55px;
-  color:white;
-}
-
-.hero h2{
+.home-box h3{
   color:#ffb6d9;
-  margin:15px 0;
+  font-size:28px;
+  margin-bottom:10px;
 }
 
-.hero p{
-  font-size:20px;
+.home-box h1{
+  font-size:58px;
+  margin-bottom:12px;
+}
+
+.home-box h2{
+  color:#ffd6e8;
+  margin-bottom:18px;
+}
+
+.home-box p{
+  font-size:18px;
   line-height:1.7;
+  margin-bottom:28px;
 }
 
-.btn{
-  display:inline-block;
-  margin:12px;
-  padding:14px 28px;
-  background:#d63384;
-  color:white;
+.menu{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:12px;
+}
+
+.menu button{
+  padding:13px 22px;
   border-radius:25px;
-  text-decoration:none;
+  border:1px solid #ffb6d9;
+  background:rgba(214,51,132,0.85);
+  color:white;
   font-weight:bold;
+  cursor:pointer;
   transition:0.3s;
 }
 
-.btn:hover{
+.menu button:hover{
   background:#ec407a;
   transform:translateY(-4px);
 }
 
-nav{
-  position:sticky;
-  top:0;
-  z-index:10;
-  background:white;
-  padding:15px;
-  text-align:center;
-  box-shadow:0 4px 15px rgba(214,51,132,0.2);
+.popup{
+  display:none;
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.55);
+  align-items:center;
+  justify-content:center;
+  padding:25px;
+  z-index:99;
 }
 
-nav a{
-  color:#d63384;
-  text-decoration:none;
-  margin:8px 12px;
-  font-weight:bold;
+.popup.active{
+  display:flex;
 }
 
-section{
-  padding:70px 10%;
+.popup-box{
+  width:90%;
+  max-width:850px;
+  max-height:85vh;
+  overflow-y:auto;
+  padding:35px;
+  border-radius:28px;
+  background:rgba(45,15,45,0.75);
+  border:1px solid rgba(255,182,217,0.8);
+  backdrop-filter:blur(18px);
+  box-shadow:0 20px 60px rgba(0,0,0,0.6);
+  animation:pop 0.25s ease;
 }
 
-.section-title{
-  text-align:center;
-  color:#d63384;
+@keyframes pop{
+  from{opacity:0; transform:scale(0.92);}
+  to{opacity:1; transform:scale(1);}
+}
+
+.close{
+  float:right;
+  background:#d63384;
+  color:white;
+  border:none;
+  width:38px;
+  height:38px;
+  border-radius:50%;
+  font-size:20px;
+  cursor:pointer;
+}
+
+.popup-box h1{
+  color:#ffb6d9;
+  margin-bottom:18px;
   font-size:36px;
-  margin-bottom:35px;
 }
 
-.card{
-  background:white;
-  padding:30px;
-  border-radius:25px;
-  margin:20px 0;
-  box-shadow:0 8px 25px rgba(214,51,132,0.15);
-  border-left:6px solid #f48fb1;
+.popup-box h2{
+  color:#ffd6e8;
+  margin:20px 0 10px;
 }
 
-.card h3{
-  color:#b03060;
-  margin-bottom:12px;
+.popup-box h3{
+  color:#ffb6d9;
+  margin-top:15px;
 }
 
-p,li{
+.popup-box p,
+.popup-box li{
   font-size:17px;
   line-height:1.8;
 }
 
-ul{
+.popup-box ul{
   margin-left:25px;
+  margin-bottom:12px;
 }
 
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:20px;
+.card{
+  background:rgba(255,255,255,0.12);
+  padding:18px;
+  border-radius:18px;
+  border-left:5px solid #ff9ed2;
+  margin:16px 0;
 }
 
 .skills{
   display:flex;
   flex-wrap:wrap;
-  gap:12px;
-  justify-content:center;
+  gap:10px;
+  margin:15px 0;
 }
 
 .skills span{
-  background:#ffe4ef;
-  color:#b03060;
-  padding:12px 18px;
+  background:rgba(255,182,217,0.25);
+  border:1px solid #ffb6d9;
+  padding:10px 15px;
   border-radius:25px;
   font-weight:bold;
 }
@@ -151,102 +188,75 @@ ul{
 table{
   width:100%;
   border-collapse:collapse;
-  margin-top:20px;
-  background:white;
-  border-radius:15px;
-  overflow:hidden;
+  margin-top:15px;
+  background:rgba(255,255,255,0.12);
 }
 
 th{
   background:#d63384;
-  color:white;
 }
 
-td,th{
-  padding:14px;
-  border:1px solid #f8bbd0;
+th,td{
+  padding:12px;
+  border:1px solid rgba(255,182,217,0.6);
   text-align:center;
-}
-
-.timeline{
-  border-left:4px solid #f48fb1;
-  padding-left:25px;
-}
-
-.timeline-item{
-  margin-bottom:25px;
-  background:white;
-  padding:20px;
-  border-radius:18px;
-  box-shadow:0 6px 18px rgba(214,51,132,0.15);
 }
 
 footer{
-  background:#d63384;
-  color:white;
+  position:fixed;
+  bottom:15px;
+  left:0;
+  right:0;
   text-align:center;
-  padding:25px;
+  font-size:14px;
+  color:white;
 }
 
 @media(max-width:700px){
-  .hero h1{
-    font-size:38px;
-  }
-
-  section{
-    padding:50px 6%;
-  }
-
-  nav a{
-    display:inline-block;
-    margin:6px;
-  }
+  body{overflow:auto;}
+  .home-box h1{font-size:38px;}
+  .home-box{padding:30px;}
+  .menu button{width:100%;}
 }
 </style>
 </head>
 
 <body>
 
-<div class="hero" id="home">
-  <div class="hero-box">
-    <h2>Welcome to</h2>
+<div class="home">
+  <div class="home-box">
+    <h3>Welcome to</h3>
     <h1>My E-Portfolio</h1>
     <h2>Siti Zulaika Saleh</h2>
     <p>
       Final-year Computer Science student majoring in Computer Network Security at UniSZA.
       Passionate about wireless network security, intrusion detection systems, network simulation, and cybersecurity.
     </p>
-    <a href="#about" class="btn">View Portfolio</a>
-    <a href="#contact" class="btn">Contact Me</a>
+
+    <div class="menu">
+      <button onclick="openPopup('about')">👩 About</button>
+      <button onclick="openPopup('career')">🔍 Career</button>
+      <button onclick="openPopup('skills')">💻 Skills</button>
+      <button onclick="openPopup('projects')">📂 Projects</button>
+      <button onclick="openPopup('plan')">📈 Career Plan</button>
+      <button onclick="openPopup('evidence')">🏆 Evidence</button>
+      <button onclick="openPopup('reflection')">💼 Reflection</button>
+      <button onclick="openPopup('contact')">📞 Contact</button>
+    </div>
   </div>
 </div>
 
-<nav>
-  <a href="#home">Home</a>
-  <a href="#about">About</a>
-  <a href="#career">Career</a>
-  <a href="#skills">Skills</a>
-  <a href="#projects">Projects</a>
-  <a href="#plan">Career Plan</a>
-  <a href="#evidence">Evidence</a>
-  <a href="#reflection">Reflection</a>
-  <a href="#contact">Contact</a>
-</nav>
-
-<section id="about">
-  <h2 class="section-title">About Me</h2>
-
-  <div class="card">
+<div id="about" class="popup">
+  <div class="popup-box">
+    <button class="close" onclick="closePopup('about')">×</button>
+    <h1>About Me</h1>
     <p>
       I am Siti Zulaika Saleh, a final-year Bachelor of Computer Science student at
       Universiti Sultan Zainal Abidin (UniSZA), majoring in Computer Network Security.
-      I am interested in network security, wireless systems, IDS, NS-3 simulation, and cybersecurity analysis.
     </p>
-  </div>
 
-  <div class="grid">
     <div class="card">
-      <h3>Education</h3>
+      <h2>Education</h2>
       <ul>
         <li>Bachelor of Computer Science (Computer Network Security) with Honours - UniSZA</li>
         <li>STPM - Sports Science, Business Studies, and General Studies</li>
@@ -254,7 +264,7 @@ footer{
     </div>
 
     <div class="card">
-      <h3>Experience</h3>
+      <h2>Experience</h2>
       <ul>
         <li>Cashier at Restaurant - 2 Months</li>
         <li>External Netball Trainer - 5 Months</li>
@@ -262,23 +272,23 @@ footer{
       </ul>
     </div>
   </div>
-</section>
+</div>
 
-<section id="career">
-  <h2 class="section-title">Career Exploration</h2>
+<div id="career" class="popup">
+  <div class="popup-box">
+    <button class="close" onclick="closePopup('career')">×</button>
+    <h1>Career Exploration</h1>
 
-  <div class="card">
-    <h3>Chosen Career: Network Security Analyst</h3>
-    <p>
-      A Network Security Analyst is responsible for monitoring network traffic,
-      detecting security threats, analyzing suspicious activities, and protecting
-      an organization’s network from cyber attacks.
-    </p>
-  </div>
-
-  <div class="grid">
     <div class="card">
-      <h3>Job Responsibilities</h3>
+      <h2>Chosen Career: Network Security Analyst</h2>
+      <p>
+        A Network Security Analyst monitors network traffic, detects security threats,
+        analyzes suspicious activities, and helps protect an organization’s network from cyber attacks.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>Job Responsibilities</h2>
       <ul>
         <li>Monitor network traffic and security alerts</li>
         <li>Detect unauthorized access and cyber attacks</li>
@@ -288,7 +298,7 @@ footer{
     </div>
 
     <div class="card">
-      <h3>Required Skills</h3>
+      <h2>Required Skills</h2>
       <ul>
         <li>Networking fundamentals</li>
         <li>Cybersecurity knowledge</li>
@@ -297,22 +307,23 @@ footer{
         <li>Problem-solving and communication</li>
       </ul>
     </div>
+
+    <div class="card">
+      <h2>Relevance to Modern Cybersecurity</h2>
+      <p>
+        This role is important because secure networks help prevent data breaches,
+        detect attacks, and maintain network availability.
+      </p>
+    </div>
   </div>
+</div>
 
-  <div class="card">
-    <h3>Relevance to Modern Cybersecurity</h3>
-    <p>
-      This role is important because modern organizations depend on secure networks.
-      Network Security Analysts help prevent data breaches, detect attacks, and maintain network availability.
-    </p>
-  </div>
-</section>
+<div id="skills" class="popup">
+  <div class="popup-box">
+    <button class="close" onclick="closePopup('skills')">×</button>
+    <h1>Personal Skills Assessment</h1>
 
-<section id="skills">
-  <h2 class="section-title">Personal Skills Assessment</h2>
-
-  <div class="card">
-    <h3>Technical Skills</h3>
+    <h2>Technical Skills</h2>
     <div class="skills">
       <span>Network Security</span>
       <span>Cybersecurity</span>
@@ -322,10 +333,8 @@ footer{
       <span>C++</span>
       <span>Python</span>
     </div>
-  </div>
 
-  <div class="card">
-    <h3>Soft Skills</h3>
+    <h2>Soft Skills</h2>
     <div class="skills">
       <span>Communication</span>
       <span>Teamwork</span>
@@ -333,51 +342,26 @@ footer{
       <span>Problem Solving</span>
       <span>Willing to Learn</span>
     </div>
-  </div>
 
-  <div class="card">
-    <h3>Current Skills vs Industry Requirements</h3>
+    <h2>Current Skills vs Industry Requirements</h2>
     <table>
-      <tr>
-        <th>Skill</th>
-        <th>Current</th>
-        <th>Target</th>
-      </tr>
-      <tr>
-        <td>Networking</td>
-        <td>80%</td>
-        <td>90%</td>
-      </tr>
-      <tr>
-        <td>Linux</td>
-        <td>70%</td>
-        <td>85%</td>
-      </tr>
-      <tr>
-        <td>Python</td>
-        <td>60%</td>
-        <td>80%</td>
-      </tr>
-      <tr>
-        <td>Security Analysis</td>
-        <td>70%</td>
-        <td>90%</td>
-      </tr>
-      <tr>
-        <td>Wireshark</td>
-        <td>75%</td>
-        <td>90%</td>
-      </tr>
+      <tr><th>Skill</th><th>Current</th><th>Target</th></tr>
+      <tr><td>Networking</td><td>80%</td><td>90%</td></tr>
+      <tr><td>Linux</td><td>70%</td><td>85%</td></tr>
+      <tr><td>Python</td><td>60%</td><td>80%</td></tr>
+      <tr><td>Security Analysis</td><td>70%</td><td>90%</td></tr>
+      <tr><td>Wireshark</td><td>75%</td><td>90%</td></tr>
     </table>
   </div>
-</section>
+</div>
 
-<section id="projects">
-  <h2 class="section-title">Projects</h2>
+<div id="projects" class="popup">
+  <div class="popup-box">
+    <button class="close" onclick="closePopup('projects')">×</button>
+    <h1>Projects</h1>
 
-  <div class="grid">
     <div class="card">
-      <h3>Final Year Project</h3>
+      <h2>Final Year Project</h2>
       <p><b>Enhancing Wireless Network Security through IP/MAC Filtering and Intrusion Detection System (IDS)</b></p>
       <ul>
         <li>Designed and simulated wireless network security using NS-3</li>
@@ -389,48 +373,44 @@ footer{
     </div>
 
     <div class="card">
-      <h3>SULAM Project</h3>
-      <p>
-        Digital Marketing and Community Engagement project involving promotional content
-        and online engagement.
-      </p>
+      <h2>SULAM Project</h2>
+      <p>Digital Marketing and Community Engagement project involving promotional content and online engagement.</p>
     </div>
 
     <div class="card">
-      <h3>Stress Relief Dashboard</h3>
-      <p>
-        Built an interactive IoT system using ESP8266 microcontroller and Python.
-      </p>
+      <h2>Stress Relief Dashboard</h2>
+      <p>Built an interactive IoT system using ESP8266 microcontroller and Python.</p>
     </div>
   </div>
-</section>
+</div>
 
-<section id="plan">
-  <h2 class="section-title">Career Development Plan</h2>
+<div id="plan" class="popup">
+  <div class="popup-box">
+    <button class="close" onclick="closePopup('plan')">×</button>
+    <h1>Career Development Plan</h1>
 
-  <div class="card">
-    <h3>Tools to Improve</h3>
-    <div class="skills">
-      <span>Wireshark</span>
-      <span>Linux</span>
-      <span>Python</span>
-      <span>NS-3</span>
-      <span>Cisco Networking</span>
+    <div class="card">
+      <h2>Tools to Improve</h2>
+      <div class="skills">
+        <span>Wireshark</span>
+        <span>Linux</span>
+        <span>Python</span>
+        <span>NS-3</span>
+        <span>Cisco Networking</span>
+      </div>
     </div>
-  </div>
 
-  <div class="card">
-    <h3>Certification Plan</h3>
-    <ul>
-      <li>CCNA - To strengthen networking knowledge</li>
-      <li>CompTIA Security+ - To improve cybersecurity fundamentals</li>
-      <li>Basic SOC or cybersecurity workshop - To gain practical exposure</li>
-    </ul>
-  </div>
+    <div class="card">
+      <h2>Certification Plan</h2>
+      <ul>
+        <li>CCNA - To strengthen networking knowledge</li>
+        <li>CompTIA Security+ - To improve cybersecurity fundamentals</li>
+        <li>Basic SOC or cybersecurity workshop - To gain practical exposure</li>
+      </ul>
+    </div>
 
-  <div class="timeline">
-    <div class="timeline-item">
-      <h3>2-Year Goal</h3>
+    <div class="card">
+      <h2>2-Year Goal</h2>
       <ul>
         <li>Graduate from UniSZA</li>
         <li>Improve Linux, networking, and Wireshark skills</li>
@@ -439,8 +419,8 @@ footer{
       </ul>
     </div>
 
-    <div class="timeline-item">
-      <h3>5-Year Goal</h3>
+    <div class="card">
+      <h2>5-Year Goal</h2>
       <ul>
         <li>Work as a Network Security Analyst</li>
         <li>Gain hands-on cybersecurity experience</li>
@@ -449,41 +429,42 @@ footer{
       </ul>
     </div>
   </div>
-</section>
+</div>
 
-<section id="evidence">
-  <h2 class="section-title">Evidence of Learning</h2>
+<div id="evidence" class="popup">
+  <div class="popup-box">
+    <button class="close" onclick="closePopup('evidence')">×</button>
+    <h1>Evidence of Learning</h1>
 
-  <div class="card">
-    <p>
-      Evidence can include screenshots, certificates, links, or project results.
-    </p>
-    <ul>
-      <li>NS-3 simulation screenshot</li>
-      <li>NetAnim topology screenshot</li>
-      <li>Wireshark packet analysis screenshot</li>
-      <li>FYP result/output screenshot</li>
-      <li>Certificates or workshop participation</li>
-      <li>GitHub project link</li>
-    </ul>
-  </div>
-</section>
-
-<section id="reflection">
-  <h2 class="section-title">Personal Reflection</h2>
-
-  <div class="card">
-    <h3>Dream Company: Sabah Net Sdn. Bhd.</h3>
-    <p>
-      I want to work at Sabah Net because the company is related to networking and ICT services.
-      This matches my interest in computer network security and allows me to grow in a real
-      network security environment.
-    </p>
-  </div>
-
-  <div class="grid">
     <div class="card">
-      <h3>What value can I bring?</h3>
+      <p>Evidence can include screenshots, certificates, links, or project results.</p>
+      <ul>
+        <li>NS-3 simulation screenshot</li>
+        <li>NetAnim topology screenshot</li>
+        <li>Wireshark packet analysis screenshot</li>
+        <li>FYP result/output screenshot</li>
+        <li>Certificates or workshop participation</li>
+        <li>GitHub project link</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div id="reflection" class="popup">
+  <div class="popup-box">
+    <button class="close" onclick="closePopup('reflection')">×</button>
+    <h1>Personal Reflection</h1>
+
+    <div class="card">
+      <h2>Dream Company: Sabah Net Sdn. Bhd.</h2>
+      <p>
+        I want to work at Sabah Net because the company is related to networking and ICT services.
+        This matches my interest in computer network security and allows me to grow in a real network security environment.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>What value can I bring?</h2>
       <p>
         I can bring basic knowledge in network security, Wireshark, NS-3 simulation,
         cybersecurity fundamentals, and willingness to learn new technologies.
@@ -491,15 +472,15 @@ footer{
     </div>
 
     <div class="card">
-      <h3>Why should you hire me?</h3>
+      <h2>Why should you hire me?</h2>
       <p>
-        I am responsible, willing to learn, and able to work in a team. My academic background
-        and FYP experience have prepared me to understand basic network security issues.
+        I am responsible, willing to learn, and able to work in a team.
+        My academic background and FYP experience have prepared me to understand basic network security issues.
       </p>
     </div>
 
     <div class="card">
-      <h3>Suitable Skills</h3>
+      <h2>Suitable Skills</h2>
       <ul>
         <li>Basic networking knowledge</li>
         <li>Network security analysis</li>
@@ -510,26 +491,53 @@ footer{
     </div>
 
     <div class="card">
-      <h3>Strengths & Weaknesses</h3>
+      <h2>Strengths & Weaknesses</h2>
       <p><b>Strengths:</b> Willing to learn, responsible, teamwork, interested in cybersecurity.</p>
       <p><b>Weaknesses:</b> Need to improve advanced programming skills and hands-on cybersecurity experience.</p>
     </div>
+
+    <div class="card">
+      <h2>Why would a company choose to hire me?</h2>
+      <p>
+        A company may choose to hire me because I have a strong interest in network security,
+        basic technical knowledge, and motivation to improve through practical experience.
+      </p>
+    </div>
   </div>
-</section>
+</div>
 
-<section id="contact">
-  <h2 class="section-title">Contact</h2>
-
-  <div class="card" style="text-align:center;">
-    <p><b>Email:</b> sitizulaikasaleh@gmail.com</p>
-    <p><b>LinkedIn:</b> linkedin.com/in/siti-zulaika-saleh-179934416</p>
-    <p><b>GitHub:</b> github.com/sitizulaikasaleh</p>
+<div id="contact" class="popup">
+  <div class="popup-box">
+    <button class="close" onclick="closePopup('contact')">×</button>
+    <h1>Contact</h1>
+    <div class="card">
+      <p><b>Email:</b> sitizulaikasaleh@gmail.com</p>
+      <p><b>LinkedIn:</b> linkedin.com/in/siti-zulaika-saleh-179934416</p>
+      <p><b>GitHub:</b> github.com/sitizulaikasaleh</p>
+    </div>
   </div>
-</section>
+</div>
 
-<footer>
-  © 2026 Siti Zulaika Saleh | Inspired by Kinabalu
-</footer>
+<footer>© 2026 Siti Zulaika Saleh | Inspired by Kinabalu</footer>
+
+<script>
+function openPopup(id){
+  document.getElementById(id).classList.add("active");
+}
+
+function closePopup(id){
+  document.getElementById(id).classList.remove("active");
+}
+
+window.onclick = function(event){
+  const popups = document.querySelectorAll(".popup");
+  popups.forEach(function(popup){
+    if(event.target === popup){
+      popup.classList.remove("active");
+    }
+  });
+}
+</script>
 
 </body>
 </html>
