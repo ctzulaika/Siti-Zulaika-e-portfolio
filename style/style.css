@@ -26,98 +26,100 @@ body{
 }
 
 .home-box{
-  width:92%;
-  max-width:1350px;
-  padding:45px;
-  border-radius:40px;
-  background:rgba(255,255,255,0.08);
-  border:1px solid rgba(255,182,217,0.65);
-  backdrop-filter:blur(20px);
-  box-shadow:0 20px 60px rgba(0,0,0,0.45);
+  width:90%;
+  max-width:1100px;
+  padding:35px 45px;
+  border-radius:35px;
+  background:rgba(255,255,255,0.10);
+  border:1px solid rgba(255,182,217,0.75);
+  backdrop-filter:blur(18px);
+  box-shadow:0 20px 55px rgba(0,0,0,0.45);
   display:flex;
   align-items:center;
-  justify-content:space-between;
-  gap:70px;
+  justify-content:center;
+  gap:55px;
 }
 
 .left-side{
   flex:1;
   display:flex;
   flex-direction:column;
-  align-items:flex-start;
+  align-items:center;
   justify-content:center;
+  text-align:center;
 }
 
 .right-side{
-  flex:1;
+  flex:1.1;
   display:flex;
   justify-content:center;
   align-items:center;
 }
 
 .profile-img{
-  width:360px;
-  height:470px;
+  width:290px;
+  height:370px;
   object-fit:cover;
   object-position:center;
-  border-radius:35px;
-  border:6px solid rgba(255,255,255,0.9);
-  box-shadow:0 0 25px rgba(255,182,217,0.75);
-  margin-bottom:25px;
+  border-radius:28px;
+  border:5px solid white;
+  box-shadow:0 0 22px rgba(255,182,217,0.7);
+  margin-bottom:22px;
 }
 
 .left-side h1{
-  font-size:54px;
-  font-weight:700;
+  font-size:38px;
   color:white;
   margin-bottom:10px;
-  line-height:1.1;
+  font-weight:800;
 }
 
 .left-side h2{
-  font-size:24px;
   color:#ffb6d9;
-  line-height:1.3;
-  text-align:center;
-  width:360px;
+  font-size:19px;
+  line-height:1.35;
 }
 
 .menu{
   display:grid;
   grid-template-columns:repeat(2,1fr);
-  gap:22px;
+  gap:18px;
   width:100%;
-  max-width:620px;
+  max-width:480px;
 }
 
 .menu button{
-  height:95px;
-  border-radius:22px;
-  border:1px solid rgba(255,182,217,0.55);
+  height:78px;
+  border-radius:18px;
+  border:1px solid rgba(255,182,217,0.65);
   background:rgba(255,255,255,0.10);
   backdrop-filter:blur(15px);
   color:white;
-  font-size:21px;
-  font-weight:600;
+  font-size:18px;
+  font-weight:700;
   cursor:pointer;
   transition:0.3s;
-  box-shadow:0 8px 22px rgba(0,0,0,0.25);
   display:flex;
   align-items:center;
   justify-content:flex-start;
-  gap:18px;
-  padding-left:32px;
+  gap:16px;
+  padding-left:24px;
+  box-shadow:0 8px 22px rgba(0,0,0,0.25);
 }
 
 .menu button span{
-  font-size:30px;
   color:#ffb6d9;
+  font-size:28px;
+  width:35px;
+  text-align:center;
+  border-right:1px solid rgba(255,182,217,0.6);
+  padding-right:14px;
 }
 
 .menu button:hover{
-  transform:translateY(-5px);
+  transform:translateY(-4px);
   background:rgba(255,182,217,0.18);
-  box-shadow:0 15px 35px rgba(255,105,180,0.35);
+  box-shadow:0 12px 28px rgba(255,105,180,0.35);
 }
 
 .popup{
@@ -281,21 +283,6 @@ th,td{
   box-shadow:0 4px 15px rgba(0,0,0,0.3);
 }
 
-.resume-btn{
-  display:inline-block;
-  margin-top:15px;
-  padding:12px 25px;
-  background:#ff69b4;
-  color:white;
-  text-decoration:none;
-  border-radius:30px;
-  font-weight:bold;
-}
-
-.resume-btn:hover{
-  background:#d63384;
-}
-
 .contact-buttons{
   display:grid;
   grid-template-columns:repeat(2,1fr);
@@ -323,6 +310,21 @@ th,td{
   box-shadow:0 12px 25px rgba(214,51,132,0.6);
 }
 
+.resume-btn{
+  display:inline-block;
+  margin-top:15px;
+  padding:12px 25px;
+  background:#ff69b4;
+  color:white;
+  text-decoration:none;
+  border-radius:30px;
+  font-weight:bold;
+}
+
+.resume-btn:hover{
+  background:#d63384;
+}
+
 @media(max-width:900px){
   body{
     overflow:auto;
@@ -331,33 +333,29 @@ th,td{
   .home-box{
     flex-direction:column;
     gap:35px;
-  }
-
-  .left-side{
-    align-items:center;
+    padding:30px;
   }
 
   .profile-img{
-    width:260px;
-    height:340px;
+    width:230px;
+    height:300px;
   }
 
   .left-side h1{
-    font-size:36px;
-    text-align:center;
+    font-size:32px;
   }
 
   .left-side h2{
-    width:100%;
-    font-size:18px;
+    font-size:17px;
   }
 
   .menu{
     grid-template-columns:1fr;
+    max-width:100%;
   }
 
   .menu button{
-    height:70px;
+    height:68px;
   }
 
   .contact-buttons{
