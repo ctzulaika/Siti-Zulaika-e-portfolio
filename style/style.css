@@ -249,14 +249,15 @@ th,td{
 }
 
 .sabahnet-logo{
-  width:90px;
-  height:90px;
+  width:220px;
+  height:120px;
   object-fit:contain;
   background:white;
   padding:10px;
-  border-radius:50%;
+  border-radius:12px;
   display:block;
   margin:15px auto 25px auto;
+  box-shadow:0 4px 15px rgba(0,0,0,0.3);
 }
 
 .resume-btn{
